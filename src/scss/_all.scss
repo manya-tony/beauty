@@ -1,0 +1,103 @@
+/**
+* 変数
+* ====================================== */
+// カラー
+$pink: #c586a6;
+$red: #b67575;
+$blue: #6ab2c2;
+$orange: #bc936f;
+$yellow: #bcba6f;
+$green: #6fbc9b;
+$purple: #8775b7;
+$white: #f4f4f4;
+$light: #fff;
+$black: #353535;
+$grey: #848484;
+$lightgrey: #d3d3d3;
+$twitter: #00acee;
+$facebook: #3b5998;
+$instagram: #cf2e92;
+
+// 背景カラー
+.bg--pink {
+    background: $pink;
+}
+.bg--blue {
+    background: $blue;
+}
+.bg--red {
+    background: $red;
+}
+.bg--green {
+    background: $green;
+}
+.bg--yellow {
+    background: $yellow;
+}
+.bg--orange {
+    background: $orange;
+}
+.bg--purple {
+    background: $purple;
+}
+.bg--white {
+    background: $white;
+}
+
+// ブレイクポイント
+$breakpoints: (
+    xxs: "(max-width: 380px)",
+    xs: "(max-width: 575px)",
+    sm: "(max-width: 767px)",
+    md: "(max-width: 991px)",
+    lg: "(max-width: 1199px)",
+    xl: "(min-width: 1200px)"
+);
+
+/**
+* mixin
+* ====================================== */
+@mixin media($breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)}{
+        @content;
+    }
+}
+
+
+/**
+* 全体
+* ====================================== */
+body {
+    background: $white;
+    font-family: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    letter-spacing: 0.05em;
+    overflow-x: hidden;
+}
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+h1, p {
+    color: $black;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $black;
+}
+button {
+    background: none;
+	border: none;
+    outline: none;
+    padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

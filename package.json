@@ -1,0 +1,26 @@
+{
+  "name": "beauty",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss src/scss/style.scss src/css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-changed": "^4.0.2",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-process": "^0.1.2",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-pngquant": "^8.0.0",
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.1"
+  }
+}
